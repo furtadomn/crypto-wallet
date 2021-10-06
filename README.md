@@ -1,24 +1,7 @@
-# README
+# Crypto Wallet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+<strong>Curso:</strong> [Ruby on Rails](https://www.udemy.com/course/rubyonrails-5x/)
 
-Things you may want to cover:
+<strong>Instrutor:</strong> [Jackson Pires](https://www.linkedin.com/in/jackson-pires/)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+:construction: <i>Projeto em andamento...</i>
