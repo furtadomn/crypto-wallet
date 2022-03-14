@@ -6,24 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-puts "Cadastrando moedas..."
+spinner = TTY::Spinner.new("[:spinner] Cadastrando moedas...")
+spinner.auto_spin
 
-Coin.create!(
-  description: "Bitcoin",
-  acronym: "BTC",
-  url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-btc-color.svg"
-)
+coins = [{
+    description: "Bitcoin",
+    acronym: "BTC",
+    url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-btc-color.svg"
+  },
+  {
+    description: "Ethereum",
+    acronym: "ETH",
+    url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-eth-color.svg"
+  },
+  {
+    description: "Dash",
+    acronym: "DASH",
+    url_image: "https://assets.coingecko.com/coins/images/297/large/dashcoin.png?1547034071"
+  },
+]
 
-Coin.create!(
-  description: "Ethereum",
-  acronym: "ETH",
-  url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-eth-color.svg"
-)
+coins.each do | coin|
+  sleep(1) #para esperar 1 segundo a cada iteração e conseguir ver a animação do tty-spinner
+  Coin.find_or_create_by!(coin)
+end
 
-Coin.create!(
-  description: "Dash",
-  acronym: "DASH",
-  url_image: "https://assets.coingecko.com/coins/images/297/large/dashcoin.png?1547034071"
-)
-
-puts "Moedas cadastradas com sucesso!"
+spinner.success("(Concluído!)")
