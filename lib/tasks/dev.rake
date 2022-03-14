@@ -4,7 +4,7 @@ namespace :dev do
     if Rails.env.development?
       puts %x(rails db:drop db:create db:migrate db:seed)
     else
-      puts "Você não está em modo de desenvolvimento!"
+      puts "Você não está em ambiente de desenvolvimento!"
     end
   end
 end
