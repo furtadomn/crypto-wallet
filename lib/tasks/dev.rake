@@ -5,8 +5,8 @@ namespace :dev do
       show_spinner("Apagando BD...") { %x(rails db:drop) }
       show_spinner("Criando BD...") { %x(rails db:create) }
       show_spinner("Migrando BD...") { %x(rails db:migrate) }
-      %x(rails dev:add_coins)
       %x(rails dev:add_mining_types)
+      %x(rails dev:add_coins)
     else
       puts "Você não está em ambiente de desenvolvimento!"
     end
@@ -18,17 +18,20 @@ namespace :dev do
       coins = [{
           description: "Bitcoin",
           acronym: "BTC",
-          url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-btc-color.svg"
+          url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-btc-color.svg",
+          mining_type: MiningType.find_by(acronym: 'PoW')
         },
         {
           description: "Ethereum",
           acronym: "ETH",
-          url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-eth-color.svg"
+          url_image: "https://www.mercadobitcoin.com.br/resources/assets/v2/img/icons/assets/ico-eth-color.svg",
+          mining_type: MiningType.all.sample
         },
         {
           description: "Dash",
           acronym: "DASH",
-          url_image: "https://assets.coingecko.com/coins/images/297/large/dashcoin.png?1547034071"
+          url_image: "https://assets.coingecko.com/coins/images/297/large/dashcoin.png?1547034071",
+          mining_type: MiningType.all.sample
         },
       ]
 
