@@ -1,0 +1,19 @@
+pt-BR:
+  greeting: "Seja Bem-Vinde!!"
+  mining_types: "Tipos de Mineração"
+  mining_type: "Tipo de Mineração"
+  coins: "Moedas"
+  coin: "Moeda"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+    back: "Voltar"
+  delete:
+    confirm: "Tem certeza?"
+  new_coin: "Nova Moeda"
+  new_mining_type: "Novo Tipo de Mineração"
+  description: "Descrição"
+  acronym: "Sigla"
+  image: "Imagem"
+  url_image: "URL da Imagem"

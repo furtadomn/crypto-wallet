@@ -30,4 +30,21 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  greeting: "Welcome!"
+  mining_types: "Mining Types"
+  mining_type: "Mining Type"
+  coins: "Coins"
+  coin: "Coin"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Destroy"
+    back: "Back"
+  delete:    
+    confirm: "Are you sure?"
+  new_coin: "New Coin"
+  new_mining_type: "New Mining Type"
+  description: "Description"
+  acronym: "Acronym"
+  image: "Image"
+  url_image: "URL Image"  
