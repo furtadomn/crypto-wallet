@@ -1,18 +1,23 @@
-<p>
-  <%= link_to 'Português', root_path(locale: 'pt-BR') %>
-</p>
+<div class='p-3 d-flex justify-content-between'>
+  <%= I18n.l(Date.today) %>
+  <ul class='nav justify-content-end'>
+    <li class='nav-item'>
+      <%= link_to 'Português', root_path(locale: 'pt-BR'), class:'link-secondary p-3' %>
+    </li>
+    <li class='nav-item'>
+      <%= link_to 'English', '/?locale=en', class:'link-secondary p-3' %>
+    </li>
+  </ul>
+</div>
 
-<p>
-  <%= link_to 'English', '/?locale=en' %>
-</p>
+<div class='p-5 mb-4 bg-light rounded-3'>
+  <div class='container-fluid py-5'>
+    <h1 class='display-5 fw-bold'><%= t('greeting') %>!</h1>
+    <p class='lead fs-4'>Este é o Crypto Wallet, uma app para você cadastrar e acompanhar as suas criptomoedas.</p>
+    <div class='mt-5'>
+      <%= link_to t('coins'), coins_path, class:'btn btn-warning btn-lg', role:'button' %>
+      <%= link_to t('mining_types'), mining_types_path, class:'btn btn-warning btn-lg', role:'button' %>
+    </div>
+  </div>
+</div>
 
-<h1><%= t('greeting') %>!</h1>
-<p><%= I18n.l(Date.today) %></p>
-
-<li>
-  <%= link_to t('coins'), coins_path %>
-</li>
-
-<li>
-  <%= link_to t('mining_types'), mining_types_path %>
-</li>
