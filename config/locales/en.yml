@@ -31,6 +31,7 @@
 
 en:
   greeting: "Welcome!"
+  menu_msg: "This is Crypto Wallet, an app for you to register and track your cryptocurrencies."
   mining_types: "Mining Types"
   mining_type: "Mining Type"
   coins: "Coins"
