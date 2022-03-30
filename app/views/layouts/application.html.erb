@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <div class='p-3 d-flex justify-content-between'>
+      <%= I18n.l(Date.today) %>
+      <ul class='nav justify-content-end'>
+        <li class='nav-item'>
+          <%= link_to 'Português', root_path(locale: 'pt-BR'), class:'link-secondary p-3' %>
+        </li>
+        <li class='nav-item'>
+          <%= link_to 'English', '/?locale=en', class:'link-secondary p-3' %>
+        </li>
+      </ul>
+    </div>
     <%= yield %>
   </body>
 </html>
