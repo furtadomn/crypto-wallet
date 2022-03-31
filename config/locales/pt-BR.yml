@@ -10,6 +10,7 @@ pt-BR:
     show: "Mostrar"
     delete: "Apagar"
     back: "Voltar"
+    home: "Página Inicial"
   delete:
     confirm: "Tem certeza?"
   new_coin: "Nova Moeda"

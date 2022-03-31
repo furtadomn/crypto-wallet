@@ -41,6 +41,7 @@ en:
     show: "Show"
     delete: "Destroy"
     back: "Back"
+    home: "Home Page"
   delete:    
     confirm: "Are you sure?"
   new_coin: "New Coin"
