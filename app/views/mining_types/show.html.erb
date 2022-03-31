@@ -1,14 +1,14 @@
-<p id="notice"><%= notice %></p>
+<div class='p-5'>
+  <p class='fs-5'>
+    <strong><%= t('description') %>:</strong>
+    <%= @mining_type.description %>
+  </p>
 
-<p>
-  <strong><%= t('description') %>:</strong>
-  <%= @mining_type.description %>
-</p>
+  <p class='fs-5'>
+    <strong><%= t('acronym') %>:</strong>
+    <%= @mining_type.acronym %>
+  </p>
 
-<p>
-  <strong><%= t('acronym') %>:</strong>
-  <%= @mining_type.acronym %>
-</p>
-
-<%= link_to t('links.edit'), edit_mining_type_path(@mining_type) %> |
-<%= link_to t('links.back'), mining_types_path %>
+  <%= link_to t('links.edit'), edit_mining_type_path(@mining_type), class:'btn btn-dark btn-sm' %>
+  <%= link_to t('links.back'), mining_types_path, class:'btn btn-dark btn-sm' %>
+</div>
